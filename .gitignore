@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+build/
+dist/
+*.egg-info/
+.venv/
+venv/
+.DS_Store
+
+# Experiment outputs (keep the directory, drop generated reports)
+reports/*.json
+!reports/.gitkeep

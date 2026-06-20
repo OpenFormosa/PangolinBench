@@ -1,0 +1,68 @@
+pangolinbench:
+  name: "PangolinBench"
+  version: "0.1.0"
+  use_builtin_fixtures: true
+  external_manifest: null
+
+  subsets:
+    traditional_zh_formal:
+      enabled: true
+      weight: 1.0
+    taiwan_mandarin_colloquial:
+      enabled: true
+      weight: 1.0
+    taiwan_named_entities:
+      enabled: true
+      weight: 1.0
+    taigi_han_roman_mixed:
+      enabled: true
+      weight: 1.0
+    hakka_romanized:
+      enabled: true
+      weight: 1.0
+    bopomofo:
+      enabled: true
+      weight: 1.0
+    taiwan_code_switching:
+      enabled: true
+      weight: 1.0
+    rich_transcription_json:
+      enabled: true
+      weight: 1.0
+    rich_transcription_structured_text:
+      enabled: true
+      weight: 0.5
+    unicode_edge_cases:
+      enabled: true
+      weight: 0.5
+
+  rich_transcription:
+    timestamp_precision_digits: 2
+    require_structural_tokens: true
+    no_dense_timestamp_tokens: true
+
+  quality_gates:
+    require_roundtrip_ok: true
+    require_no_dense_timestamp_tokens: true
+    require_rich_transcription_tokens: true
+    require_rich_transcription_json_parse: true
+    require_timestamp_precision: true
+    require_required_json_fields: true
+    max_roundtrip_failure_rate: 0.0
+    max_dense_timestamp_tokens: 0
+    fail_on_nan_metrics: true
+
+  comparative_quality_gates:
+    enabled: false
+    max_traditional_zh_token_regression: 0.02
+    max_taiwan_lexicon_cost_regression: 0.02
+    max_rich_transcription_token_regression: 0.02
+
+  performance:
+    enabled: false
+    warmup_rounds: 2
+    measured_rounds: 5
+
+  report:
+    include_example_text: false
+    max_examples_per_subset: 20
