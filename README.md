@@ -2,7 +2,7 @@
 
 # PangolinBench
 
-PangolinBench 是給台灣語言情境用的斷詞器評測。它同時檢查斷詞器能不能正確還原文字，以及切得有不有效率。
+PangolinBench 是給台灣語言情境用的斷詞器評測。它同時檢查斷詞器能不能正確還原文字，以及切分是否有效率。
 
 <p align="center">
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-Apache%202.0-0b6b50?style=flat-square" alt="License: Apache 2.0"></a>
