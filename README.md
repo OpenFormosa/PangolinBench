@@ -71,3 +71,7 @@ pangolinbench-throughput \
 
 `import pangolinbench` and the quality benchmark never import `ubitok`; the
 dependency is loaded lazily only when the throughput benchmark actually runs.
+
+## License
+
+Apache License 2.0 © 2026 OpenFormosa contributors. See [LICENSE](LICENSE). Evaluation corpora referenced through manifests keep their own licenses.
